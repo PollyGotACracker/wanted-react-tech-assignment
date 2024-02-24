@@ -1,0 +1,26 @@
+.wrapper {
+  position: relative;
+  flex: 1;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.list {
+  position: absolute;
+  top: calc(50% - (95% / 2));
+  left: calc(50% - (98% / 2));
+  width: 98%;
+  height: 95%;
+  padding: 0 8px;
+  list-style: none;
+  overflow-y: auto;
+}
+.list::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
+}
+.list::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 8px;
+}

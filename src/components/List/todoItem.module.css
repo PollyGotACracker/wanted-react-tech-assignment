@@ -1,0 +1,28 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 8px;
+  padding: 8px 2%;
+}
+.item:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.content {
+  word-break: break-all;
+}
+
+.delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  font-size: 1.4rem;
+  background-color: transparent;
+  border-radius: 50%;
+}
+.delete:enabled:hover {
+  color: #e46962;
+}
