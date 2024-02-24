@@ -4,9 +4,10 @@
   align-items: center;
   column-gap: 8px;
   padding: 8px 2%;
-}
-.item:not(:last-child) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.item:last-child {
+  border-color: transparent;
 }
 
 .content {
