@@ -38,12 +38,13 @@
   left: 0;
   right: 0;
   color: inherit;
-  transition: opacity 0.2s linear;
   opacity: 0;
+  transition: opacity 1s step-end;
   z-index: 1;
 }
-.add:enabled:hover::before {
+.add:enabled:active::before {
   opacity: 1;
+  transition: 0s;
 }
 .add::after {
   content: "";
@@ -53,13 +54,16 @@
   width: 150px;
   height: 150px;
   transform-origin: center;
-  transform: scale(0);
-  transition: transform 0.2s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  transform: scale(1);
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
   border-radius: 50%;
   background-color: var(--primary);
 }
-.add:enabled:hover::after {
-  transform: scale(1);
+.add:enabled:active::after {
+  transform: scale(0);
+  opacity: 1;
+  transition: 0s;
 }
 
 @media (prefers-color-scheme: light) {
